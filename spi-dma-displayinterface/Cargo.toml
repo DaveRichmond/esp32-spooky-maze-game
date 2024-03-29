@@ -6,8 +6,8 @@ edition = "2021"
 
 [dependencies]
 byte-slice-cast = { version = "0.3.5", default-features = false }
-display-interface = "0.4"
-display-interface-spi = "0.4"
+display-interface = "0.5"
+display-interface-spi = "0.5"
 embedded-graphics = "0.8.0"
 embedded-hal = { version = "1.0" }
 embedded-dma = "0.2.0"
