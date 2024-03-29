@@ -18,11 +18,7 @@ log = { version = "0.4.18" }
 mipidsi = "0.7.1"
 spooky-core = { path = "../spooky-core", default-features = false}
 
-esp32-hal = { version = "0.17.0", optional = true }
-esp32c3-hal = { version = "0.14.0", optional = true }
-esp32c6-hal = { version = "0.7.0", optional = true }
-esp32s2-hal = { version = "0.14.0", optional = true }
-esp32s3-hal = { version = "0.14.0", optional = true }
+esp-hal = { version = "0.16.1", optional = true }
 
 [features]
 default = [ "esp32", "dynamic_maze", "resolution_320x240", "mpu6886" ]
@@ -32,11 +28,11 @@ default = [ "esp32", "dynamic_maze", "resolution_320x240", "mpu6886" ]
 mpu6886 = [ "dep:mpu6886" ]
 # mpu9250 = [ "dep:mpu9250" ]
 
-esp32 = [ "esp32-hal" ]
-esp32c3 = [ "esp32c3-hal" ]
-esp32c6 = [ "esp32c6-hal" ]
-esp32s2 = [ "esp32s2-hal" ]
-esp32s3 = [ "esp32s3-hal" ]
+esp32 = [ "esp-hal/esp32" ]
+esp32c3 = [ "esp-hal/esp32c3" ]
+esp32c6 = [ "esp-hal/esp32c6" ]
+esp32s2 = [ "esp-hal/esp32s2" ]
+esp32s3 = [ "esp-hal/esp32s3" ]
 
 dynamic_maze = ["spooky-core/dynamic_maze"]
 static_maze = ["spooky-core/static_maze"]
